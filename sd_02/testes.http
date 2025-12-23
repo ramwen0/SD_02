@@ -1,0 +1,16 @@
+### Criar um novo dispositivo
+POST http://localhost:8080/api/devices
+Content-Type: application/json
+
+{
+  "id": "sensor_sala_01",
+  "protocol": "REST",
+  "sala": "L101",
+  "departamento": "Informatica",
+  "piso": "1",
+  "edificio": "Espirito Santo",
+  "ativo": true
+}
+
+### Listar todos os dispositivos
+GET http://localhost:8080/api/devices
