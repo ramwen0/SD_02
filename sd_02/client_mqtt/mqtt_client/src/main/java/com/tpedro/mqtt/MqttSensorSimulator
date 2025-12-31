@@ -7,9 +7,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class MqttSensorSimulator {
+    
     public static void main(String[] args) {
-        String broker = "tcp://localhost:1883";
-        String deviceId = "sensor_sala_101"; // ESTE ID TEM DE EXISTIR NA TUA BD
+        String broker = "tcp://broker.hivemq.com:1883";
+        String deviceId = "sensor_sala_101"; 
         String topic = "uevora/metrics";
 
         try {
@@ -24,29 +25,29 @@ public class MqttSensorSimulator {
             System.out.println("Simulador MQTT iniciado para o dispositivo: " + deviceId);
 
             while (true) {
-                // 1. Gerar variação gradual (-0.5 a +0.5)
+                // Variação gradual (-0.5 a +0.5)
                 currentTemp += (random.nextDouble() - 0.5);
                 currentHum += (random.nextDouble() - 0.5);
 
-                // Garantir que ficam dentro dos intervalos do PDF (15-30ºC e 30-80%)
+                // Valores dentro dos intervalos (15-30ºC e 30-80%)
                 currentTemp = Math.max(15, Math.min(30, currentTemp));
                 currentHum = Math.max(30, Math.min(80, currentHum));
 
-                // 2. Criar o JSON exatamente como o Servidor espera (MetricDTO)
+                // JSON exatamente MetricDTO
                 String timestamp = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
                 String jsonPayload = String.format(
                     "{\"id\":\"%s\", \"temperatura\":%.2f, \"humidade\":%.2f, \"timestamp\":\"%s\"}",
                     deviceId, currentTemp, currentHum, timestamp
                 );
 
-                // 3. Publicar
+                // Publicar JSON
                 MqttMessage message = new MqttMessage(jsonPayload.getBytes());
                 message.setQos(1);
                 client.publish(topic, message);
 
                 System.out.println("Enviado: " + jsonPayload);
 
-                // 4. Esperar 5 segundos antes da próxima leitura
+                // Esperar 5 segundos antes da próxima leitura
                 Thread.sleep(5000);
             }
 

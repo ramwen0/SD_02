@@ -3,7 +3,7 @@ POST http://localhost:8080/api/devices
 Content-Type: application/json
 
 {
-  "id": "sensor_sala_01",
+  "id": "sensor_sala_101",
   "protocol": "REST",
   "sala": "L101",
   "departamento": "Informatica",

@@ -25,7 +25,7 @@ public class MqttConfig {
     public MqttPahoClientFactory mqttClientFactory() {
         DefaultMqttPahoClientFactory factory = new DefaultMqttPahoClientFactory();
         MqttConnectOptions options = new MqttConnectOptions();
-        options.setServerURIs(new String[] {"tcp://localhost:1883"}); // Endereço do broker
+        options.setServerURIs(new String[] {"tcp://broker.hivemq.com:1883"}); // Endereço do broker
         factory.setConnectionOptions(options);
         return factory;
     }
