@@ -22,13 +22,13 @@ public class MqttClientApplication implements CommandLineRunner {
 // Classe auxiliar no mesmo ficheiro para facilitar
 class MqttSensorSimulatorLogic {
     public void start() {
+        org.eclipse.paho.client.mqttv3.MqttClient client = null;
         try {
-            org.eclipse.paho.client.mqttv3.MqttClient client = 
-                new org.eclipse.paho.client.mqttv3.MqttClient("tcp://broker.hivemq.com:1883", "sensor_sala_101_teste");
+            client = new org.eclipse.paho.client.mqttv3.MqttClient("tcp://broker.hivemq.com:1883", "sensor_sala_101_teste");
             client.connect();
             System.out.println("Simulador MQTT iniciado!");
-            
-            while(true) {
+
+            while (true) {
                 String payload = "{\"id\":\"sensor_sala_101\", \"temperatura\":22.0, \"humidade\":50.0, \"timestamp\":\"2025-12-31T12:00:00\"}";
                 client.publish("uevora/metrics", new org.eclipse.paho.client.mqttv3.MqttMessage(payload.getBytes()));
                 System.out.println("Enviado: " + payload);
@@ -36,6 +36,21 @@ class MqttSensorSimulatorLogic {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            if (client != null && client.isConnected()) {
+                try {
+                    client.disconnect();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            if (client != null) {
+                try {
+                    client.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
