@@ -2,9 +2,6 @@ package com.tpedro.sd_02.grpc;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import com.tpedro.sd_02.grpc.MetricServiceGrpc;
-import com.tpedro.sd_02.grpc.MetricRequest;
-import com.tpedro.sd_02.grpc.MetricResponse;
 import java.util.Random;
 import java.time.LocalDateTime;
 

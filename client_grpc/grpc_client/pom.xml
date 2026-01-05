@@ -66,7 +66,7 @@
                     <pluginId>grpc-java</pluginId>
                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.60.0:exe:${os.detected.classifier}</pluginArtifact>
                     <!-- Caminho para o mesmo ficheiro .proto que o servidor usa -->
-                    <protoSourceRoot>client_grpc\grpc_client\src\main\java\com\tpedro\proto</protoSourceRoot>
+                    <protoSourceRoot>src\main\proto</protoSourceRoot>
                 </configuration>
                 <executions>
                     <execution>
