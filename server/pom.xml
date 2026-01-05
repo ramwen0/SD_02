@@ -17,7 +17,7 @@
 	<description>Sistema de Monitorização Ambiental - UÉvora</description>
 
 	<properties>
-		<java.version>25</java.version>
+		<java.version>17</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
@@ -78,6 +78,17 @@
 			<artifactId>grpc-server-spring-boot-starter</artifactId>
 			<version>3.1.0.RELEASE</version>
 		</dependency>
+		<!-- Explicit Netty HTTP/2 patched dependencies to mitigate HTTP/2 Rapid Reset / MadeYouReset CVEs -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-codec-http2</artifactId>
+			<version>4.1.100.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-handler</artifactId>
+			<version>4.1.100.Final</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.annotation</groupId>
 			<artifactId>javax.annotation-api</artifactId>
@@ -110,7 +121,7 @@
 					<protocArtifact>com.google.protobuf:protoc:3.25.1:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
 					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.60.0:exe:${os.detected.classifier}</pluginArtifact>
-					<protoSourceRoot>../proto</protoSourceRoot>
+					<protoSourceRoot>server\src\main\java\com\tpedro\sd_02\proto</protoSourceRoot>
 				</configuration>
 				<executions>
 					<execution>

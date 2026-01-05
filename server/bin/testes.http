@@ -25,3 +25,17 @@ Content-Type: application/json
   "humidade": 45.0,
   "timestamp": "2024-12-08T14:30:00"
 }
+
+### Criar um dispositivo gRPC
+POST http://localhost:8080/api/devices
+Content-Type: application/json
+
+{
+  "id": "gateway_01",
+  "protocol": "GRPC",
+  "sala": "126",
+  "departamento": "Informatica",
+  "piso": "1",
+  "edificio": "CLAV",
+  "ativo": true
+}
