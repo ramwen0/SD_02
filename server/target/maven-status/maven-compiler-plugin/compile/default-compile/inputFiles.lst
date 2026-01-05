@@ -1,0 +1,10 @@
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\config\MqttConfig.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\controller\DeviceController.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\controller\MetricController.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\dto\MetricDTO.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\model\Device.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\model\Metric.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\model\ProtocolType.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\repository\DeviceRepository.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\repository\MetricRepository.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\Sd02Application.java

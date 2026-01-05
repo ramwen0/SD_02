@@ -4,7 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// O código do simulador agora vive aqui dentro!
 @SpringBootApplication
 public class MqttClientApplication implements CommandLineRunner {
 
@@ -14,12 +13,11 @@ public class MqttClientApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Chamamos a lógica do simulador aqui
+        // lógica do simulador
         new MqttSensorSimulatorLogic().start();
     }
 }
 
-// Classe auxiliar no mesmo ficheiro para facilitar
 class MqttSensorSimulatorLogic {
     public void start() {
         org.eclipse.paho.client.mqttv3.MqttClient client = null;
