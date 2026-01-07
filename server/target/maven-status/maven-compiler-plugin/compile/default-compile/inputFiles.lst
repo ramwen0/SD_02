@@ -1,3 +1,4 @@
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\config\GrpcMetricService.java
 C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\config\MqttConfig.java
 C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\controller\DeviceController.java
 C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\controller\MetricController.java
@@ -8,3 +9,9 @@ C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_0
 C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\repository\DeviceRepository.java
 C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\repository\MetricRepository.java
 C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\src\main\java\com\tpedro\sd_02\Sd02Application.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\target\generated-sources\protobuf\grpc-java\com\tpedro\sd_02\grpc\MetricServiceGrpc.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\target\generated-sources\protobuf\java\com\tpedro\sd_02\grpc\MetricRequest.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\target\generated-sources\protobuf\java\com\tpedro\sd_02\grpc\MetricRequestOrBuilder.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\target\generated-sources\protobuf\java\com\tpedro\sd_02\grpc\MetricResponse.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\target\generated-sources\protobuf\java\com\tpedro\sd_02\grpc\MetricResponseOrBuilder.java
+C:\Users\Tiago Pedro\Documents\GitHub\SD_02\server\target\generated-sources\protobuf\java\com\tpedro\sd_02\grpc\MetricsProto.java

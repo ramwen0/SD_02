@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GrpcSensorSimulator",
+            "request": "launch",
+            "mainClass": "com.tpedro.sd_02.grpc.GrpcSensorSimulator",
+            "projectName": "grpc_client"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MqttClientApplication<mqtt_client>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.tpedro.mqtt.MqttClientApplication",
+            "projectName": "mqtt_client",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
