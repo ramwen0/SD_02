@@ -1,12 +1,16 @@
 package com.tpedro.sd_02.controller;
 
+import com.tpedro.sd_02.dto.AverageMetricsDTO;
 import com.tpedro.sd_02.dto.MetricDTO;
 import com.tpedro.sd_02.model.*;
 import com.tpedro.sd_02.repository.*;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/metrics")
@@ -39,4 +43,40 @@ public class MetricController {
 
         return ResponseEntity.ok("Métrica processada com sucesso via REST.");
     }
+
+    @GetMapping("/average")
+    public ResponseEntity<AverageMetricsDTO> getAverages(
+        @RequestParam String level,
+        @RequestParam String id,
+        @RequestParam(required = false) String from, 
+        @RequestParam(required = false) String to) {
+            // Formatar ID
+            String formattedId = id.replace("_", " ");
+            // Adicionar datas
+            LocalDateTime start = (from != null) ? LocalDateTime.parse(from) : LocalDateTime.now().minusDays(1);
+            LocalDateTime end = (from != null) ? LocalDateTime.parse(to) : LocalDateTime.now().minusDays(1);
+
+            AverageMetricsDTO result;
+
+            // Escolher query baseada no nível
+            switch (level.toLowerCase()) {
+                case "edificio":
+                    result = metricRepository.findAverageByEdificio(formattedId, start, end);
+                    break;
+                case "piso":
+                    result = metricRepository.findAverageByPiso(formattedId, start, end);
+                    break;
+                case "departamento":
+                    result = metricRepository.findAverageByDepartamento(formattedId, start, end);
+                    break;
+                case "sala":
+                    result = metricRepository.findAverageByDepartamento(formattedId, start, end);
+                    break;
+                default:
+                    return ResponseEntity.badRequest().build();
+            }
+
+            return ResponseEntity.ok(result);
+        }
+    
 }

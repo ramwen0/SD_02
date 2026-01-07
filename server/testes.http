@@ -1,29 +1,15 @@
-### Criar um novo dispositivo
+### Criar um dispositivo REST
 POST http://localhost:8080/api/devices
 Content-Type: application/json
 
 {
   "id": "sensor_sala_101",
   "protocol": "REST",
-  "sala": "L101",
+  "sala": "256",
   "departamento": "Informatica",
   "piso": "1",
   "edificio": "Espirito Santo",
   "ativo": true
-}
-
-### Listar todos os dispositivos
-GET http://localhost:8080/api/devices
-
-### Enviar métrica via REST
-POST http://localhost:8080/api/metrics/ingest
-Content-Type: application/json
-
-{
-  "id": "sensor_sala_01",
-  "temperatura": 22.5,
-  "humidade": 45.0,
-  "timestamp": "2024-12-08T14:30:00"
 }
 
 ### Criar um dispositivo gRPC
@@ -39,3 +25,37 @@ Content-Type: application/json
   "edificio": "CLAV",
   "ativo": true
 }
+
+### Criar um dispositivo MQTT
+POST http://localhost:8080/api/devices
+Content-Type: application/json
+
+{
+  "id": "sensor_sala_01",
+  "protocol": "MQTT",
+  "sala": "150",
+  "departamento": "Informatica",
+  "piso": "1",
+  "edificio": "Espirito Santo",
+  "ativo": true
+}
+
+### Listar todos os dispositivos
+GET http://localhost:8080/api/devices
+
+### Listar um dispositivo específico
+GET http://localhost:8080/api/devices/sensor_sala_101
+
+### Enviar métrica via REST
+POST http://localhost:8080/api/metrics/ingest
+Content-Type: application/json
+
+{
+  "id": "sensor_sala_01",
+  "temperatura": 22.5,
+  "humidade": 45.0,
+  "timestamp": "2026-01-07T14:30:00"
+}
+
+### Ver médias de métricas
+GET http://localhost:8080/api/metrics/average?level=edificio&id=CLAV

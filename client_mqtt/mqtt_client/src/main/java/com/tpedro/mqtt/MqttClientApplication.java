@@ -27,7 +27,7 @@ class MqttSensorSimulatorLogic {
             System.out.println("Simulador MQTT iniciado!");
 
             while (true) {
-                String payload = "{\"id\":\"sensor_sala_101\", \"temperatura\":22.0, \"humidade\":50.0, \"timestamp\":\"2025-12-31T12:00:00\"}";
+                String payload = "{\"id\":\"sensor_sala_01\", \"temperatura\":22.0, \"humidade\":50.0, \"timestamp\":\"2026-01-07T12:00:00\"}";
                 client.publish("uevora/metrics", new org.eclipse.paho.client.mqttv3.MqttMessage(payload.getBytes()));
                 System.out.println("Enviado: " + payload);
                 Thread.sleep(5000);

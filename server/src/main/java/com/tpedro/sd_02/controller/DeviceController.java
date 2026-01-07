@@ -62,4 +62,11 @@ public class DeviceController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    // DELETE -> Remover TODOS os dispositivos
+    @DeleteMapping
+    public ResponseEntity<String> deleteAllDevices() {
+        deviceRepository.deleteAll(); 
+        return ResponseEntity.ok("Todos os dispositivos e as suas métricas foram removidos.");
+    }
 }
