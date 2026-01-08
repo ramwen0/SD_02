@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 
-public class Main {
+public class AdminInterface {
     private static final String BASE_URL = "http://localhost:8080/api";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final Scanner scanner = new Scanner(System.in);
