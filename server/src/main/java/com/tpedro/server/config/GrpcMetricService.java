@@ -1,6 +1,6 @@
 package com.tpedro.server.config;
 
-import com.tpedro.sd_02.grpc.*;
+import com.tpedro.server.grpc.*;
 import com.tpedro.server.model.*;
 import com.tpedro.server.repository.*;
 

@@ -1,4 +1,4 @@
-package com.tpedro.sd_02.grpc;
+package com.tpedro.grpc;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
