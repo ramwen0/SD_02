@@ -2,6 +2,7 @@ C:\SD_02\server\src\main\java\com\tpedro\sd_02\config\GrpcMetricService.java
 C:\SD_02\server\src\main\java\com\tpedro\sd_02\config\MqttConfig.java
 C:\SD_02\server\src\main\java\com\tpedro\sd_02\controller\DeviceController.java
 C:\SD_02\server\src\main\java\com\tpedro\sd_02\controller\MetricController.java
+C:\SD_02\server\src\main\java\com\tpedro\sd_02\controller\SystemController.java
 C:\SD_02\server\src\main\java\com\tpedro\sd_02\dto\AverageMetricsDTO.java
 C:\SD_02\server\src\main\java\com\tpedro\sd_02\dto\MetricDTO.java
 C:\SD_02\server\src\main\java\com\tpedro\sd_02\model\Device.java

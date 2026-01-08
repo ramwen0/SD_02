@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.tpedro.Main",
+            "projectName": "admin_cli"
+        },
+        {
+            "type": "java",
             "name": "GrpcSensorSimulator",
             "request": "launch",
             "mainClass": "com.tpedro.sd_02.grpc.GrpcSensorSimulator",

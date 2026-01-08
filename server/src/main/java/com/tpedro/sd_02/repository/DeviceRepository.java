@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DeviceRepository extends JpaRepository<Device, String> {
 	// Interface para operações CRUD em dispositivos
+	long countByAtivoTrue();
 }
