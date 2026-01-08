@@ -75,7 +75,7 @@ public class Main {
             case 3:
                 try {
                     System.out.println("Insira o ID: "); String removeId = scanner.nextLine();
-                    restTemplate.delete(BASE_URL + "/devices/" + removeId);
+                    restTemplate.delete(BASE_URL + "/devices" + removeId);
                     System.out.print("Dispositivo " + removeId + " apagado.");
                 } catch (Exception e) {
                     System.err.println("Erro a eliminar: " + e.getMessage());
@@ -123,7 +123,7 @@ public class Main {
             System.out.printf("Total de Dispositivos Registados: %d\n", stats.get("totalDevices"));
             System.out.printf("Total de Métricas em Base de Dados: %d\n", stats.get("totalMetrics"));
             System.out.printf("Dispositivos ativos: %d\n", stats.get("activeDevices"));
-            System.out.printf("Dispositivos inativos: %d\n", stats.get("inactiveDevices"));
+            System.out.printf("Dispositivos inativos: %d\n", stats.get("activeDevices"));
             System.out.println("-------------------------------------------");
             
             if ((Integer)stats.get("totalDevices") > 0) {

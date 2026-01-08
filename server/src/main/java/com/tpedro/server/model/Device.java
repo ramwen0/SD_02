@@ -1,4 +1,4 @@
-package com.tpedro.sd_02.model;
+package com.tpedro.server.model;
 
 import jakarta.persistence.*;
 import java.util.List;

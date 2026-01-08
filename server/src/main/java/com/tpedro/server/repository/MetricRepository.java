@@ -1,10 +1,11 @@
-package com.tpedro.sd_02.repository;
-
-import com.tpedro.sd_02.dto.AverageMetricsDTO;
-import com.tpedro.sd_02.model.Metric;
+package com.tpedro.server.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.tpedro.server.dto.AverageMetricsDTO;
+import com.tpedro.server.model.Metric;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 

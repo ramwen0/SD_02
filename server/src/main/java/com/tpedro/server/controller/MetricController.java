@@ -1,12 +1,12 @@
-package com.tpedro.sd_02.controller;
-
-import com.tpedro.sd_02.dto.AverageMetricsDTO;
-import com.tpedro.sd_02.dto.MetricDTO;
-import com.tpedro.sd_02.model.*;
-import com.tpedro.sd_02.repository.*;
+package com.tpedro.server.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.tpedro.server.dto.AverageMetricsDTO;
+import com.tpedro.server.dto.MetricDTO;
+import com.tpedro.server.model.*;
+import com.tpedro.server.repository.*;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

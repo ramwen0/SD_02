@@ -1,9 +1,9 @@
-package com.tpedro.sd_02.config;
+package com.tpedro.server.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.tpedro.sd_02.dto.MetricDTO;
-import com.tpedro.sd_02.controller.MetricController;
+import com.tpedro.server.controller.MetricController;
+import com.tpedro.server.dto.MetricDTO;
 
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.tpedro.sd_02.dto;
+package com.tpedro.server.dto;
 
 import java.time.LocalDateTime;
 

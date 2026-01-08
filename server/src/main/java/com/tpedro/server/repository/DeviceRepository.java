@@ -1,8 +1,9 @@
-package com.tpedro.sd_02.repository;
+package com.tpedro.server.repository;
 
-import com.tpedro.sd_02.model.Device;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.tpedro.server.model.Device;
 
 @Repository
 public interface DeviceRepository extends JpaRepository<Device, String> {

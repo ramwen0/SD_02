@@ -1,28 +1,24 @@
-package com.tpedro.sd_02.controller;
+package com.tpedro.server.controller;
 
-import com.tpedro.sd_02.model.Device;
-import com.tpedro.sd_02.repository.DeviceRepository;
-import com.tpedro.sd_02.repository.MetricRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.tpedro.server.model.Device;
+import com.tpedro.server.repository.DeviceRepository;
 
 
 @RestController
 @RequestMapping("/api/devices")
 public class DeviceController {
     private final DeviceRepository deviceRepository;
-    private final MetricRepository metricRepository;
 
-    public DeviceController(DeviceRepository deviceRepository, MetricRepository metricRepository) {
+    public DeviceController(DeviceRepository deviceRepository) {
         this.deviceRepository = deviceRepository;
-        this.metricRepository = metricRepository;
     }
 
     // POST -> Registar novo dispositivo

@@ -1,8 +1,9 @@
-package com.tpedro.sd_02.config;
+package com.tpedro.server.config;
 
 import com.tpedro.sd_02.grpc.*;
-import com.tpedro.sd_02.model.*;
-import com.tpedro.sd_02.repository.*;
+import com.tpedro.server.model.*;
+import com.tpedro.server.repository.*;
+
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 

@@ -1,9 +1,10 @@
-package com.tpedro.sd_02.controller;
+package com.tpedro.server.controller;
 
-import com.tpedro.sd_02.repository.DeviceRepository;
-import com.tpedro.sd_02.repository.MetricRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.tpedro.server.repository.DeviceRepository;
+import com.tpedro.server.repository.MetricRepository;
 
 import java.util.HashMap;
 import java.util.Map;

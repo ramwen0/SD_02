@@ -1,4 +1,4 @@
-package com.tpedro.sd_02.model;
+package com.tpedro.server.model;
 
 public enum ProtocolType {
     MQTT,
