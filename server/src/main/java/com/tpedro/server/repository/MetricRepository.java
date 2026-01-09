@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.tpedro.server.dto.AverageMetricsDTO;
-import com.tpedro.server.dto.MetricDTO;
 import com.tpedro.server.model.Metric;
 
 import org.springframework.data.jpa.repository.Query;

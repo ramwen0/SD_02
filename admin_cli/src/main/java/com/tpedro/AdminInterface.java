@@ -46,7 +46,7 @@ public class AdminInterface {
 
         switch (subOp) {
             case 1:
-                List<Map<String,Object>> devices = restTemplate.getForObject(BASE_URL + "/devices", List.class);
+                @SuppressWarnings("unchecked") List<Map<String,Object>> devices = restTemplate.getForObject(BASE_URL + "/devices", List.class);
                 System.out.println("\nID | Sala | Departamento | Piso | Edifício | Protocolo | Estado (ativo)");
                 System.out.println("-------------------------------------------------");
                 for (Map<String, Object> d : devices) {
@@ -108,6 +108,7 @@ public class AdminInterface {
                 String checkId = scanner.nextLine();
 
                 try {
+                    @SuppressWarnings("unchecked")
                     Map<String, Object> device = restTemplate.getForObject(BASE_URL + "/devices/" + checkId, Map.class);
 
                     if (device != null) {
@@ -156,6 +157,7 @@ public class AdminInterface {
                 if (!to.isEmpty()) url += "&to=" + to;
 
                 try {
+                    @SuppressWarnings("unchecked")
                     Map<String, Object> res = restTemplate.getForObject(url, Map.class);
                     if (res != null && res.get("avgTemperatura") != null && res.get("avgHumidade") != null) {
                         System.out.println("\n\t-- Resultados --");
@@ -186,6 +188,7 @@ public class AdminInterface {
                 if (!toRaw.isEmpty()) urlRaw += "&to=" + toRaw;
 
                 try {
+                    @SuppressWarnings("unchecked")
                     List<Map<String, Object>> metrics = restTemplate.getForObject(urlRaw, List.class);
                     if (metrics != null && !metrics.isEmpty()) {
                         System.out.println("\n\t=== Histórico de Métricas: " + deviceId + " ===");
@@ -215,6 +218,7 @@ public class AdminInterface {
 
     private static void mostrarEstatisticas() {
         try {
+            @SuppressWarnings("unchecked")
             Map<String, Object> stats = restTemplate.getForObject(BASE_URL + "/stats", Map.class);
             
             System.out.println("\n========= ESTATÍSTICAS DO SISTEMA =========");
