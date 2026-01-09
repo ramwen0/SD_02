@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.tpedro.server.grpc";
+option java_outer_classname = "MetricsProto";
+
+package metrics;
+
+// Definições de mgs enviadas pelo servidor
+message MetricRequest {
+    string deviceId = 1;    
+    double temperatura = 2;
+    double humidade = 3;
+    string timestamp = 4;
+}
+
+// Resposta do servidor
+message MetricResponse {
+    string status = 1;
+    string message = 2;
+}
+
+// Serviço
+service MetricService {
+    rpc sendMetric (MetricRequest) returns (MetricResponse);
+}

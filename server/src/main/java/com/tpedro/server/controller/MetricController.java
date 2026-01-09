@@ -9,7 +9,9 @@ import com.tpedro.server.model.*;
 import com.tpedro.server.repository.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
+
 
 
 @RestController
@@ -78,5 +80,34 @@ public class MetricController {
 
             return ResponseEntity.ok(result);
         }
+    
+    @GetMapping("/raw")
+    public ResponseEntity<List<Metric>> getAllMetrics(
+        @RequestParam String deviceId,
+        @RequestParam(required = false) String from, 
+        @RequestParam(required = false) String to) {
+            
+            //String formattedId = deviceId.replace("_", " ");
+
+            LocalDateTime start;
+            LocalDateTime end;
+
+            try {
+                start = (from != null && !from.trim().isEmpty()) 
+                        ? LocalDateTime.parse(from) 
+                        : LocalDateTime.now().minusDays(1);
+
+                end = (to != null && !to.trim().isEmpty()) 
+                        ? LocalDateTime.parse(to) 
+                        : LocalDateTime.now();
+            } catch (Exception e) {
+                start = LocalDateTime.now().minusDays(1);
+                end = LocalDateTime.now();
+            }
+            List<Metric> result = metricRepository.findRawMetrics(deviceId, start, end); 
+
+            return ResponseEntity.ok(result);
+    }
+    
     
 }

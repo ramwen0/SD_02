@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AdminInterface",
+            "request": "launch",
+            "mainClass": "com.tpedro.AdminInterface",
+            "projectName": "admin_cli"
+        },
+        {
+            "type": "java",
+            "name": "GrpcSensorSimulator",
+            "request": "launch",
+            "mainClass": "com.tpedro.grpc.GrpcSensorSimulator",
+            "projectName": "grpc_client"
+        },
+        {
+            "type": "java",
+            "name": "RestSensorSimulator",
+            "request": "launch",
+            "mainClass": "com.tpedro.rest.RestSensorSimulator",
+            "projectName": "rest_client"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.tpedro.Main",

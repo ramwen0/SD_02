@@ -1,4 +1,4 @@
-package com.tpedro.sd_02;
+package com.tpedro.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

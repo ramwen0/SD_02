@@ -13,8 +13,6 @@
 	<groupId>com.tpedro</groupId>
 	<artifactId>server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>server</name>
-	<description>Sistema de Monitorização Ambiental - UÉvora</description>
 
 	<properties>
 		<java.version>17</java.version>
@@ -99,7 +97,7 @@
 
 	<build>
 		<extensions>
-			<!-- Isto permite ao Maven saber se estás em Windows, Linux ou Mac para o gRPC -->
+			<!-- Windows, Linux ou Mac para o gRPC -->
 			<extension>
 				<groupId>kr.motd.maven</groupId>
 				<artifactId>os-maven-plugin</artifactId>
