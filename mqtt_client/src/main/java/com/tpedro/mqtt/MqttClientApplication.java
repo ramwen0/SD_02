@@ -22,7 +22,7 @@ class MqttSensorSimulatorLogic {
     public void start() {
         org.eclipse.paho.client.mqttv3.MqttClient client = null;
         try {
-            client = new org.eclipse.paho.client.mqttv3.MqttClient("tcp://broker.hivemq.com:1883", "sensor_sala_101_teste");
+            client = new org.eclipse.paho.client.mqttv3.MqttClient("tcp://broker.hivemq.com:1883", "sensor_sala_01_teste");
             client.connect();
             System.out.println("Simulador MQTT iniciado!");
 
